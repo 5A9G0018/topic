@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: Touch of Purple
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>𥴊仔‧雜貨‧店</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+</head>
+<script>
+//宣告預設表單內容為空 （你想要的話也可以加東西）
+    var initSubject='',initBody='';
+ 
+    //按下傳送按鈕後執行
+    function submitHandler(){
+        var to = "5a9g0018@stust.edu.tw";//寫死的傳送對象 就是公司的信箱 不會顯示在網頁上
+        var name = nameText.value;//讀取ID為 nameTextuser 物件中的值
+        var email = emailText.value;
+        var tel = telText.value;
+        var subject = subText.value;
+//把user填的資料都塞到 mail body 中
+        var body = ""+bodyText.value+'%0A%0A%0A';//%0A是換行 換了三行
+            body += "From："+nameText.value+'%0A';
+            body += "Email："+emailText.value+'%0A';
+            body += "Tel："+telText.value;
+//傳送的主要程式碼
+        mailTo.href="mailto:"+to+"?subject="+subject+"&body="+body;
+        mailTo.click();
+    }
+//在body onload
+    function init(){
+        subText.value=initSubject;
+        toText.value=initTo;
+        bodyText.value=initBody;
+    }
+</script>
+
+<body id="top">
+<div class="wrapper col1">
+  <div id="header">
+    <div class="fl_left">
+      <h1><a href="../index.html">𥴊仔‧雜貨‧店</a></h1>
+      <p>臺灣古早味的歷史</p>
+    </div>
+    <div class="fl_right"><a href="#"><img src="images/demo/468x60.gif" alt="" /></a></div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="topbar">
+    <div id="topnav">
+      <ul>
+        <li><a href="../index.html">特展首頁</a></li>
+        <li><a href="../pages/full-width.html">最新公告</a></li> 
+        <li ><a href="style-demo.html">特展內容</a></li>
+        <li><a href="#">關於網頁設計團隊</a>
+          <ul>
+            <li><a href="https://his.ncku.edu.tw/">成功大學</a></li>
+            <li><a href="https://www.nmth.gov.tw/">台灣歷史博物館</a></li>
+            <li><a href="https://csie.stust.edu.tw/tc">南台科技大學</a></li>
+          </ul>
+        </li>
+        <li class="active"><a href="feedback.html">回饋網站</a></li>
+      </ul>
+    </div>
+    <div id="search">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="text" value="全站搜尋&hellip;"  onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="submit" name="go" id="go" value="Search" />
+        </fieldset>
+      </form>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="container">
+    <div id="content">
+      <div id="comments">
+        <body background="../images/new/LN03_005.jpg">
+    <h2>Comments</h2>
+    <ul class="commentlist">
+      <li class="comment_odd">
+        <div class="author"><img class="avatar" src="../images/demo/avatar.gif" width="32" height="32" alt="" /><span class="name"><a href="#">A Name</a></span> <span class="wrote">wrote:</span></div>
+        <div class="submitdate"><a href="#">August 4, 2009 at 8:35 am</a></div>
+        <p>This is an example of a comthe comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+      </li>
+      <li class="comment_even">
+        <div class="author"><img class="avatar" src="../images/demo/avatar.gif" width="32" height="32" alt="" /><span class="name"><a href="#">A Name</a></span> <span class="wrote">wrote:</span></div>
+        <div class="submitdate"><a href="#">August 4, 2009 at 8:35 am</a></div>
+        <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+      </li>
+      <li class="comment_odd">
+        <div class="author"><img class="avatar" src="../images/demo/avatar.gif" width="32" height="32" alt="" /><span class="name"><a href="#">A Name</a></span> <span class="wrote">wrote:</span></div>
+        <div class="submitdate"><a href="#">August 4, 2009 at 8:35 am</a></div>
+        <p>This is an example of a comment made on a post. You can either edit the comment, delete the comment or reply to the comment. Use this as a place to respond to the post or to share what you are thinking.</p>
+      </li>
+    </ul>
+  </div>
+  <h2><font color="#000000"><b>回饋</b></font></h2>
+  <div id="respond">
+    <form   enctype="text/plain" accept-charset="utf-8">
+    <!-- 寄件者姓名    -->
+     <input id="nameText" type="text" name="Name"  value size="60" placeholder="姓名(name)" required>  <!-- required 必填欄位 ，placeholder 預設內容--> 
+     
+     <!-- 寄件者email -->
+     <input id="emailText" type="email" name="Email"  value size="60" placeholder="Email" required>
+     
+     <!-- 寄件者電話 -->
+     <input id="telText"type="tel" name="Phone"  value size="60" aria-invalid="false" placeholder="電話(phone)" required>
+     
+     <!-- 郵件主旨 -->
+     <input  id="subText" type="text" name="Subject"  value size="60" aria-invalid="false" placeholder="主旨(subject)" required>
+             
+     <!-- 郵件內容 -->
+     <textarea id="bodyText" name="your-message" cols="40" rows="10"  aria-required="true" aria-invalid="false" placeholder="你的訊息(Your Message)" required></textarea>
+     
+     <!-- 傳送按鈕 -->
+     <div>
+         <input type="button" value="送出訊息" onclick="submitHandler();">
+         <a id="mailTo"></a>
+     </div>
+ </form>
+  </body>
+  </div>
+</div>
+  </body>
+  </div>
+</div>
+
+</body>
+</html>
